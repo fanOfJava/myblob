@@ -51,4 +51,26 @@ learning rate 一开始设置为1e-2，直到validateion set的准确率不在�
 2、S是可变长的。每一张图片随机rescale到一个S_{min}到S_{max}之间的一个数，这是有一定道理的因为测试数据集中图片的尺寸也是随机的。当然这也可以看成是一种数据扩增的一种手段。
 这种变长尺寸的网络训练，可以通过fine-tune scale=384的网络得到
 
-### Testing
+注意：这里rescale之后的图片需要经过crop成统一大小的224×224再进入卷积网络进行训练
+
+##Classification Experiments
+
+###Single Scale Evaluation
+这里测试的尺寸取定值,且Q=S，测试结果如下图所示
+
+![](../img/very_deep_convolutional_networks/table_3.png)
+
+由此得出结论：
+
+1. LRN并没啥卵用。
+2. 分类错误率随着模型深度的增加减小。
+3. 在训练的时候，scale jittering能够提高模型的精度。
+
+###Comparison with state of the art
+对比如下图所示
+
+![](../img/very_deep_convolutional_networks/table_7.png)
+
+
+##Conclusion
+本篇论文主要贡献就是说明了卷积神经网络的深度对于效果的重要性。
