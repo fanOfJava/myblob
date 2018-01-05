@@ -53,9 +53,9 @@ learning rate 一开始设置为1e-2，直到validateion set的准确率不在�
 
 注意：这里rescale之后的图片需要经过crop成统一大小的224×224再进入卷积网络进行训练
 
-##Classification Experiments
+## Classification Experiments
 
-###Single Scale Evaluation
+### Single Scale Evaluation
 这里测试的尺寸取定值,且Q=S，测试结果如下图所示
 
 ![](../img/very_deep_convolutional_networks/table_3.png)
@@ -66,11 +66,11 @@ learning rate 一开始设置为1e-2，直到validateion set的准确率不在�
 2. 分类错误率随着模型深度的增加减小。
 3. 在训练的时候，scale jittering能够提高模型的精度。
 
-###Comparison with state of the art
+### Comparison with state of the art
 对比如下图所示
 
 ![](../img/very_deep_convolutional_networks/table_7.png)
 
 
-##Conclusion
+## Conclusion
 本篇论文主要贡献就是说明了卷积神经网络的深度对于效果的重要性。
