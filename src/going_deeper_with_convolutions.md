@@ -3,7 +3,7 @@
 
 ## Abstract
 
-本篇论文我们提出一种由Inception架构而成的深度卷积神经网络，在ImageNet Large-Scale Visual Recognition Challenge 2014上分类和检测上都取得了最好的效果。Inception这种架构最大的优点在于剑圣了网络的计算开销。通过精心的设计，我们在增加了网络的深度和宽度的同时，保持计算量不变。
+本篇论文我们提出一种由Inception架构而成的深度卷积神经网络，在ImageNet Large-Scale Visual Recognition Challenge 2014上分类和检测上都取得了最好的效果。Inception这种架构最大的优点在节省了网络的计算开销。通过精心的设计，我们在增加了网络的深度和宽度的同时，保持计算量不变。
 
 ## Introduction
 深度学习以及神经网络快速发展，人们不再只关注更给力的硬件、更大的数据集、更大的模型，而是更在意新的idea、新的算法以及模型的改进。
