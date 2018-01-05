@@ -15,7 +15,7 @@
 ## Architectural Details
 Inception 结构的主要思路是怎样用密集成分来近似最优的局部稀疏结构。 
 作者首先提出下图这样的基本结构：
-![](../img/going_deeper_with_convolutions/naive inception.png)
+![](../img/going_deeper_with_convolutions/naive_inception.png)
 
 
 对上图做以下说明： 
