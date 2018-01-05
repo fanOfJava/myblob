@@ -3,7 +3,7 @@
 This is the main page for notes of papers on deep learning.
 
 ### Convolutional Networks
-1. [VERY DEEP CONVOLUTIONAL NETWORKS FOR LARGE-SCALE IMAGE RECOGNITION](papers/convolutional network/Very deep convolutional networks for large-scale image recognition)
+1. [VERY DEEP CONVOLUTIONAL NETWORKS FOR LARGE-SCALE IMAGE RECOGNITION](file:///papers/convolutional network/Very deep convolutional networks for large-scale image recognition.pdf)
 
 You can use the [editor on GitHub](https://github.com/fanOfJava/myblob/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
