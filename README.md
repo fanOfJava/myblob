@@ -23,8 +23,11 @@ Reducing Internal Covariate Shift](https://github.com/fanOfJava/myblob/blob/mast
 
 ### Object Detection
 1. [Region-based Convolutional Networks for Accurate Object Detection and Segmentation](https://github.com/fanOfJava/myblob/blob/master/papers/object%20detection/Region-based%20convolutional%20networks%20for%20accurate%20object%20detection%20and%20segmentation%20(2016)%2C%20R.%20Girshick%20et%20al..pdf)《Rich feature hierarchies for Accurate Object Detection and Segmentation》，这篇文章的算法思想又被称之为：R-CNN（Regions with Convolutional Neural Network Features），是**物体检测**领域曾经获得state-of-art精度的经典文献。这篇paper的思想，改变了物体检测的总思路，现在好多文献关于深度学习的物体检测的算法，基本上都是继承了这个思想，学习经典算法，有助于我们以后搞物体检测的其它paper。详见[Paper Notes](https://github.com/fanOfJava/myblob/blob/master/src/region-based_convolutional_networks_for_accurate_object_detection_and_segmentation.md)
-2.[Spatial Pyramid Pooling in Deep Convolutional Networks for Visual Recognition](https://github.com/fanOfJava/myblob/blob/master/papers/object%20detection/Spatial%20Pyramid%20Pooling%20in%20Deep%20Convolutional.pdf) 
-本篇读书日记主要记录大神何凯明2014年的paper：《Spatial Pyramid Pooling in Deep Convolutional Networks for Visual Recognition》，这篇paper主要的创新点在于提出了空间金字塔池化，这个算法比R-CNN算法的速度快了n多倍。详见[Paper Notes](https://github.com/fanOfJava/myblob/blob/master/src/spatial_pyramid _pooling_in_deep_convolutional_networks_for_visual_recognition.md)
+
+
+2. [Spatial Pyramid Pooling in Deep Convolutional Networks for Visual Recognition](https://github.com/fanOfJava/myblob/blob/master/papers/object%20detection/Spatial%20Pyramid%20Pooling%20in%20Deep%20Convolutional.pdf) 
+本篇读书日记主要记录大神何凯明2014年的paper：《Spatial Pyramid Pooling in Deep Convolutional Networks for Visual Recognition》，这篇paper主要的创新点在于提出了空间金字塔池化，这个算法比R-CNN算法的速度快了n多倍。详见[Paper Notes](https://github.com/fanOfJava/myblob/blob/master/src/spatial_pyramid_pooling_in_deep_convolutional_networks_for_visual_recognition.md) 
+
 
 
 
