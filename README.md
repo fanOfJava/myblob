@@ -21,7 +21,7 @@ Reducing Internal Covariate Shift](https://github.com/fanOfJava/myblob/blob/mast
 5. [Deep Residual Learning for Image Recognition](https://github.com/fanOfJava/myblob/blob/master/papers/convolutional%20network/Deep%20residual%20learning%20for%20image%20recognition%20(2016)%2C%20K.%20He%20et%20al..pdf)
 在图像分类中，往往要求神经网络需要比较深以达到好的效果，然而，随着网络层数的增加，**梯度消失/爆炸**的问题阻碍了模型的收敛。当然，可以通过标准的初始化和正则化层来基本解决解决梯度消失/爆炸的问题。然而随着神经网络深度的增加，却出现了精确度饱和的问题，而且会迅速的变差。这个实验结果让人一脸懵逼，直观上考虑两个神经网络，一个是浅层的神经网络，比如说20层，另一个与之对应的深层神经网络为56层，照理来说，56层的神经网络只要前面20层保持与浅层一样，后面36层，每层都做一个Indentity映射，这样就能保证训练误差不比20层的差。本文为了解决这个问题，引入了**残差模块**，并且根据此设计了**残差网络**。详见[Paper Notes](https://github.com/fanOfJava/myblob/blob/master/src/deep_residual_learning_for_image_recognition.md)
 
-6. [Fully Convolutional Networks for Semantic Segmentation](https://github.com/fanOfJava/myblob/blob/master/papers/convolutional%20network/Deep%20residual%20learning%20for%20image%20recognition%20(2016)%2C%20K.%20He%20et%20al..pdf)
+6. [Fully Convolutional Networks for Semantic Segmentation](https://github.com/fanOfJava/myblob/blob/master/papers/convolutional%20network/Long_Fully_Convolutional_Networks_2015_CVPR_paper.pdf)
 全卷积网络：从图像级理解到像素级理解。与物体分类要建立图像级理解任务不同的是，有些应用场景下要得到图像像素级别的分类结果，例如：1）语义级别图像分割(semantic image segmentation), 最终要得到对应位置每个像素的分类结果。2） 边缘检测, 相当于对每个像素做一次二分类（是边缘或不是边缘）。以语义图像分割为例，其目的是将图像分割为若干个区域, 使得语义相同的像素被分割在同意区域内。下图是一个语义图像分割的例子, 输入图像, 输出的不同颜色的分割区域表示不同的语义：背景、人和马。**转自**[ZhiHu](https://zhuanlan.zhihu.com/p/20872103?refer=dlclass)
 
 ### Object Detection
