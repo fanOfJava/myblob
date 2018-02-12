@@ -59,10 +59,12 @@ Reducing Internal Covariate Shift](https://github.com/fanOfJava/myblob/blob/mast
 
 ### Generative Adversarial Nets
 1. [Generative Adversarial Nets](https://github.com/fanOfJava/myblob/blob/master/papers/gan/Generative%20Adversarial%20Nets.pdf)
-	作何提出了一个通过对抗过程估计生成模型的新框架，在新框架中我们同时训练两个模型：一个用来捕获数据分布的生成模型G，和一个用来估计样本来自训练数据而不是G的概率的判别模型D，G的训练过程是最大化D产生错误的概率。这个框架相当于一个极小化极大的双方博弈。在任意函数G 和D 的空间中存在唯一的解，其中G恢复训练数据分布，并且D处处都等于1/2。 详见[Paper Notes](https://github.com/fanOfJava/myblob/blob/master/src/generative_adversarial_nets.md)  
+	作何提出了一个通过对抗过程估计生成模型的新框架，在新框架中我们同时训练两个模型：一个用来捕获数据分布的生成模型G，和一个用来估计样本来自训练数据而不是G的概率的判别模型D，G的训练过程是最大化D产生错误的概率。这个框架相当于一个极小化极大的双方博弈。在任意函数G 和D 的空间中存在唯一的解，其中G恢复训练数据分布，并且D处处都等于1/2。 详见[Paper Notes](https://github.com/fanOfJava/myblob/blob/master/src/generative_adversarial_nets.md)推荐台大李宏毅教授的深度学习[ppt](http://speech.ee.ntu.edu.tw/~tlkagk/courses/MLDS_2017/Lecture/More%20GAN%20(v14).pptx) 
 
 2. [Conditional Generative Adversarial Nets](https://github.com/fanOfJava/myblob/blob/master/papers/gan/Conditional%20Generative%20Adversarial%20Nets.pdf)
 	2014年，Goodfellow提出了Generative Adversarial Networks，在论文的最后他指出了GAN的优缺点以及未来的研究方向和拓展，其中他提到的第一点拓展就是：A conditional generative model p(x|c) can be obtained by adding c as input to both G and D。这是因为这种不需要预先建模的方法缺点是太过自由了，对于较大的图片，较多的pixel的情形，基于简单 GAN 的方式就不太可控了。于是我们希望得到一种条件型的生成对抗网络，通过给GAN中的G和D增加一些条件性的约束，来解决训练太自由的问题。于是同年，Mirza等人就提出了一种Conditional Generative Adversarial Networks，这是一种带条件约束的生成对抗模型，它在生成模型（G）和判别模型（D）的建模中均引入了条件变量y，这里y可以是label，可以是tags，可以是来自不同模态是数据，甚至可以是一张图片，使用这个额外的条件变量，对于生成器对数据的生成具有指导作用。 详见[Paper Notes](http://blog.csdn.net/wspba/article/details/54666907)
+3. [Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks]()
+	图像到图像转换是一类视觉和图形问题，其目标是通过训练学习输入图片的风格，将其映射到框架类似的输出图片中。尽管对于很多任务而言，配对训练数据可遇不可求。我们提出了一种在没有配对的情况下从来源域 X 到目标域 Y 进行图像转换的方式。我们的目标是实现 G:X→ Y，其中 G(X) 的图像分布与使用对抗性损失分布的 Y 难以区分。因为映射非常不完全，我们将其以 F:Y→ X 的方式建立映射，同时引入循环一致性损失函数来推动 F(G(X))≈X（反之亦然）。我们在无法配对的训练数据中演示了新方法的成果，其中包括风格迁移、材质改变、季节变化、图像增强等。我们业余之前一些方法进行了定量比较，展示了新方法的优越性。详见[Paper Notes](http://www.sohu.com/a/132709734_465975)。小插曲：关于这篇论文，本人还在公司内部算法讨论会上分享过，感兴趣的可以[戳我]() 
 
 
 
