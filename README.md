@@ -58,6 +58,10 @@ Reducing Internal Covariate Shift](https://github.com/fanOfJava/myblob/blob/mast
 	相较于其他的state-of-the-art 物体检测系统，YOLO在**物体定位时更容易出错**，但是在背景上预测出不存在的物体（**false positives）的情况会少一些**。而且，YOLO比DPM、R-CNN等物体检测系统能够学到更加抽象的物体的特征，这使得YOLO可以从真实图像领域迁移到其他领域，如艺术。详见[Paper Notes](http://blog.csdn.net/hrsstudy/article/details/70305791) 
 
 ### Generative Adversarial Nets
+**"Generative Adversarial Networks is the most interesting idea in the last ten years in machine learning"----Yann LeCun,Director,Facebook AI**
+
+基于此，废话不说，直接上论文代码[列表](https://github.com/fanOfJava/myblob/blob/master/src/AdversarialNets.md)
+
 1. [Generative Adversarial Nets](https://github.com/fanOfJava/myblob/blob/master/papers/gan/Generative%20Adversarial%20Nets.pdf)
 	作何提出了一个通过对抗过程估计生成模型的新框架，在新框架中我们同时训练两个模型：一个用来捕获数据分布的生成模型G，和一个用来估计样本来自训练数据而不是G的概率的判别模型D，G的训练过程是最大化D产生错误的概率。这个框架相当于一个极小化极大的双方博弈。在任意函数G 和D 的空间中存在唯一的解，其中G恢复训练数据分布，并且D处处都等于1/2。 详见[Paper Notes](https://github.com/fanOfJava/myblob/blob/master/src/generative_adversarial_nets.md)推荐台大李宏毅教授的深度学习[ppt](http://speech.ee.ntu.edu.tw/~tlkagk/courses/MLDS_2017/Lecture/More%20GAN%20(v14).pptx) 
 
