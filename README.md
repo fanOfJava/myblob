@@ -55,7 +55,34 @@ Reducing Internal Covariate Shift](https://github.com/fanOfJava/myblob/blob/mast
 	
 	**YOLO检测物体的速度很快**，标准版本的YOLO在Titan X 的 GPU 上能达到45 FPS。网络较小的版本Fast YOLO在保持mAP是之前的其他实时物体检测器的两倍的同时，检测速度可以达到155 FPS。
 	
-	相较于其他的state-of-the-art 物体检测系统，YOLO在**物体定位时更容易出错**，但是在背景上预测出不存在的物体（**false positives）的情况会少一些**。而且，YOLO比DPM、R-CNN等物体检测系统能够学到更加抽象的物体的特征，这使得YOLO可以从真实图像领域迁移到其他领域，如艺术。详见[Paper Notes](http://blog.csdn.net/hrsstudy/article/details/70305791) 
+	相较于其他的state-of-the-art 物体检测系统，YOLO在**物体定位时更容易出错**，但是在背景上预测出不存在的物体（**false positives）的情况会少一些**。而且，YOLO比DPM、R-CNN等物体检测系统能够学到更加抽象的物体的特征，这使得YOLO可以从真实图像领域迁移到其他领域，如艺术。详见[Paper Notes](http://blog.csdn.net/hrsstudy/article/details/70305791)
+
+4. [SSD: Single Shot MultiBox Detector](https://github.com/fanOfJava/myblob/blob/master/papers/object%20detection/Single%20Shot%20MultiBox%20Detector.pdf) 
+
+	现流行的 state-of-art 的检测系统大致都是如下步骤，先生成一些假设的 bounding boxes，然后在这些 bounding boxes 中提取特征，之后再经过一个分类器，来判断里面是不是物体，是什么物体。
+	
+	本文提出的实时检测方法，消除了中间的 bounding boxes、pixel or feature resampling 的过程。虽然本文不是第一篇这样做的文章（YOLO），但是本文做了一些提升性的工作，既保证了速度，也保证了检测精度。
+
+	本文的主要贡献总结如下：
+	
+	- 提出了新的物体检测方法：SSD，比原先最快的 YOLO: You Only Look Once 方法，还要快，还要精确。保证速度的同时，其结果的 mAP 可与使用 region proposals 技术的方法（如 Faster R-CNN）相媲美。
+	- SSD 方法的核心就是 predict object（物体），以及其 归属类别的 score（得分）；同时，在 feature map 上使用小的卷积核，去 predict 一系列 bounding boxes 的 box offsets。
+	- 本文中为了得到高精度的检测结果，在不同层次的 feature maps 上去 predict object、box offsets，同时，还得到不同 aspect ratio 的 predictions。
+	- 本文的这些改进设计，能够在当输入分辨率较低的图像时，保证检测的精度。同时，这个整体 end-to-end 的设计，训练也变得简单。在检测速度、检测精度之间取得较好的 trade-off。
+	-本文提出的模型（model）在不同的数据集上，如 PASCAL VOC、MS COCO、ILSVRC， 都进行了测试。在检测时间（timing）、检测精度（accuracy）上，均与目前物体检测领域 state-of-art 的检测方法进行了比较。
+
+	详见[Paper Notes](http://blog.csdn.net/u010167269/article/details/52563573) 
+
+
+
+
+
+
+
+
+	
+
+ 
 
 ### Generative Adversarial Nets
 **"Generative Adversarial Networks is the most interesting idea in the last ten years in machine learning"----Yann LeCun,Director,Facebook AI**
