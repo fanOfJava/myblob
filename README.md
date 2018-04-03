@@ -99,6 +99,14 @@ Reducing Internal Covariate Shift](https://github.com/fanOfJava/myblob/blob/mast
 
 
 
+### Scene Text Detector
+
+1. [TextBoxes++: A Single-Shot Oriented Scene Text Detector](https://github.com/fanOfJava/myblob/blob/master/papers/ocr/TextBoxes%2B%2B.pdf)
+	场景文字检测在文字识别中扮演中很重要的角色，和普通的物体检测不同的是，场景文字检测的难点主要在于，在自然图像中，文字的角度，大小以及长宽比各异。本篇论文提出了一种可以端到端训练的快速的检测任意角度文字的场景文字检测器。具体详见[Paper Notes](https://github.com/fanOfJava/myblob/blob/master/src/textboxes++.md) 
+
+
+
+
 
 
 
