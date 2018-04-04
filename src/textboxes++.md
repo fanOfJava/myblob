@@ -37,3 +37,13 @@
 
 ![](/img/textboxes++/network.png)
 在VGG16的13层卷积的基础上，增加了10层卷积，以及6层textboxes layer（本质上还是卷积层），总共29层的网络，Fig2中介绍文本框用四边形或者ratated rectangle表示，本文经过测试发现，用四边形表示对于检测精度和召回更好。可以看到，TextBoxes++网络结构中除了卷积就是pooling，这样的话，对输入的图像大小没有限制，可以进行多尺度的训练和测试。所以对于某一个default-box，网络的输出包括：一个2维的概率(包含文字和背景概率)，一个4维的包含多边形的最小长方形box的，相对于default-box的偏差。在训练的时候，是根据这个box和default-box的IOU来区分哪个default-box负责ground-truth的预测。还有一个8维的四边形box的偏差量。所以textboxes layer的channel数量是2+4+8=14
+一些有趣的说明图示如下
+![](/img/textboxes++/fig3.png)
+
+![](/img/textboxes++/fig4.png)
+****
+#Experiments
+对比常见的检测算法，实验结果如下：
+
+![](/img/textboxes++/experiment.png)
+
