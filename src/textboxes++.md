@@ -1,10 +1,10 @@
 # TextBoxes++: A Single-Shot Oriented Scene Text Detector
 
 ****
-#Abstract
+# Abstract
 场景文字检测在文字识别中扮演中很重要的角色，和普通的物体检测不同的是，场景文字检测的难点主要在于，在自然图像中，文字的角度，大小以及长宽比各异。本篇论文提出了一种可以端到端训练的快速的检测任意角度文字的场景文字检测器。在各种公开数据集，包括ICDAR2015和COCO上做测试发现，检测器无论是速度还是精度都是棒棒哒！
 ****
-#Introduction
+# Introduction
 场景文字检测的挑战主要包括：
 
 1. various in both foreground text and background text
@@ -24,7 +24,7 @@
 
 本文介绍的TextBoxes++是一种word-based和Multi-oriented的检测器。TextBoxes++基于SSD，但由于传统的SSD对于极端长宽比的文字以及任意方向的文字检测都束手无策，所以作者就挖了个这个坑，提出了TextBoxes++，通过引入一个叫textboxes layer来解决这个问题。
 ****
-#Overview
+# Overview
 基于SSD，作者提出了一系列特殊的操作，使得网络能够检测不同方向的文字。
 
 1. 提出了用四边形来表示任意方向的文字框(废话)
@@ -32,7 +32,7 @@
 3. 为了不仅保持横向default-boxes的密集性，而且还为了保证竖直方向的密集性，作者设置了default-boxes的竖直偏置
 4. 作者在textboxes layer中设计了特殊的卷积(3*5)来替代传统的(3*3)卷积，以此来better handle text lines detecting
 ****
-#Proposed network
+# Proposed network
 整体网络结构如下图所示：
 
 ![](/img/textboxes++/network.png)
@@ -42,7 +42,7 @@
 
 ![](/img/textboxes++/fig4.png)
 ****
-#Experiments
+# Experiments
 对比常见的检测算法，实验结果如下：
 
 ![](/img/textboxes++/experiment.png)
