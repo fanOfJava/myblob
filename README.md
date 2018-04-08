@@ -72,6 +72,11 @@ Reducing Internal Covariate Shift](https://github.com/fanOfJava/myblob/blob/mast
 	-本文提出的模型（model）在不同的数据集上，如 PASCAL VOC、MS COCO、ILSVRC， 都进行了测试。在检测时间（timing）、检测精度（accuracy）上，均与目前物体检测领域 state-of-art 的检测方法进行了比较。
 
 	详见[Paper Notes](http://blog.csdn.net/u010167269/article/details/52563573) 
+5. [R-FCN: Object Detection via Region-based Fully Convolutional Networks](https://github.com/fanOfJava/myblob/blob/master/papers/object%20detection/R-FCN.pdf)
+
+	这篇论文是NIPS 2016的一篇论文，主要贡献在于解决了“分类网络的位置不敏感性（translation-invariance in image classification）”与“检测网络的位置敏感性（translation-variance in object detection）”之间的矛盾，在提升精度的同时利用“位置敏感得分图（position-sensitive score maps）”提升了检测速度。
+		
+	详见[Paper Notes](https://zhuanlan.zhihu.com/p/30867916) 
 
 
 
