@@ -109,6 +109,9 @@ Reducing Internal Covariate Shift](https://github.com/fanOfJava/myblob/blob/mast
 1. [TextBoxes++: A Single-Shot Oriented Scene Text Detector](https://github.com/fanOfJava/myblob/blob/master/papers/ocr/TextBoxes%2B%2B.pdf)
 	场景文字检测在文字识别中扮演中很重要的角色，和普通的物体检测不同的是，场景文字检测的难点主要在于，在自然图像中，文字的角度，大小以及长宽比各异。本篇论文提出了一种可以端到端训练的快速的检测任意角度文字的场景文字检测器。具体详见[Paper Notes](https://github.com/fanOfJava/myblob/blob/master/src/textboxes++.md) 
 
+1. [CTPN: Detecting Text in Natural Image with Connectionist Text Proposal Network](https://github.com/fanOfJava/myblob/blob/master/papers/ocr/Detecting%20Text%20in%20Natural%20Image%20with%20Connectionist%20Text%20Proposal%20Network.pdf)
+	场景文字端到端的识别，主流方法都分为两部，即场景文字的检测和识别。作为识别的基础模块，场景文字检测也直是研究的热点，CTPN是发表在2016-ECCV中的一种场景文本算法，在水平文本检测方面性能较好[Paper Notes](https://github.com/fanOfJava/myblob/blob/master/src/ctpn.md) 
+
 
 
 
