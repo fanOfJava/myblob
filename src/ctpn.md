@@ -38,13 +38,13 @@ sequence, resulting in a unified end-to-end trainable model."
 
 原始CTPN只检测横向排列的文字。CTPN结构与Faster R-CNN基本类似，但是加入了LSTM层。假设输入 N Images：
 
-1. 首先VGG提取特征，获得大小为 N \times C\times H\times W 的conv5 feature map。
+1. 首先VGG提取特征，获得大小为 N×C×H×W 的conv5 feature map。
 
-2. 之后在conv5上做 3×3 的滑动窗口，即每个点都结合周围 3×3 区域特征获得一个长度为 3×3×C 的特征向量。输出 N \times9C\times H\times W 的feature map，该特征显然只有CNN学习到的空间特征。
+2. 之后在conv5上做 3×3 的滑动窗口，即每个点都结合周围 3×3 区域特征获得一个长度为 3×3×C 的特征向量。输出 N×9C×H×W 的feature map，该特征显然只有CNN学习到的空间特征。
 
-3. 再将这个的feature map每一行都作为一个 T_{max}= W 的数据流，输入Bi-directional LSTM（双向LSTM），学习每一行的sequence feature。经过reshape后最终输出N \times256\times H\times W 特征，既包含空间特征，也包含了LSTM学习到的序列特征。
+3. 再将这个的feature map每一行都作为一个 T_{max}= W 的数据流，输入Bi-directional LSTM（双向LSTM），学习每一行的sequence feature。经过reshape后最终输出N×256×H×W 特征，既包含空间特征，也包含了LSTM学习到的序列特征。
 
-4. 再经过“FC”卷积层，变为 N \times512\times H\times W 的特征。
+4. 再经过“FC”卷积层，变为 N×512×H×W 的特征。
 
 5. 最后经过类似Faster R-CNN的RPN网络，获得text proposals。
 
